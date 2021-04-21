@@ -1,0 +1,383 @@
+{
+	"name": "github-request",
+	"versions": {
+		"1.0.0": {
+			"name": "github-request",
+			"version": "1.0.0",
+			"description": "Simplified GitHub API requests.",
+			"keywords": [
+				"github",
+				"request"
+			],
+			"homepage": "https://github.com/scottgonzalez/github-request",
+			"bugs": "https://github.com/scottgonzalez/github-request/issues",
+			"author": {
+				"name": "Scott González",
+				"email": "scott.gonzalez@gmail.com",
+				"url": "http://scottgonzalez.com"
+			},
+			"main": "./lib/request.js",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/scottgonzalez/github-request.git"
+			},
+			"_id": "github-request@1.0.0",
+			"dist": {
+				"shasum": "7e96dbeb730518ef4f15a70db835b2768089fe0c",
+				"tarball": "https://registry.npmjs.org/github-request/-/github-request-1.0.0.tgz"
+			},
+			"_from": ".",
+			"_npmVersion": "1.2.18",
+			"_npmUser": {
+				"name": "scott.gonzalez",
+				"email": "scott.gonzalez@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "scott.gonzalez",
+					"email": "scott.gonzalez@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.1.0": {
+			"name": "github-request",
+			"version": "1.1.0",
+			"description": "Simplified GitHub API requests.",
+			"keywords": [
+				"github",
+				"request"
+			],
+			"homepage": "https://github.com/scottgonzalez/github-request",
+			"bugs": {
+				"url": "https://github.com/scottgonzalez/github-request/issues"
+			},
+			"author": {
+				"name": "Scott González",
+				"email": "scott.gonzalez@gmail.com",
+				"url": "http://scottgonzalez.com"
+			},
+			"main": "./lib/request.js",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/scottgonzalez/github-request.git"
+			},
+			"_id": "github-request@1.1.0",
+			"dist": {
+				"shasum": "0330ac99b7efad54e8edd30f305165f47ed167ca",
+				"tarball": "https://registry.npmjs.org/github-request/-/github-request-1.1.0.tgz"
+			},
+			"_from": ".",
+			"_npmVersion": "1.3.14",
+			"_npmUser": {
+				"name": "scott.gonzalez",
+				"email": "scott.gonzalez@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "scott.gonzalez",
+					"email": "scott.gonzalez@gmail.com"
+				}
+			],
+			"directories": {},
+			"contributors": []
+		},
+		"1.2.0": {
+			"name": "github-request",
+			"version": "1.2.0",
+			"description": "Simplified GitHub API requests.",
+			"keywords": [
+				"github",
+				"request"
+			],
+			"homepage": "https://github.com/scottgonzalez/github-request",
+			"bugs": {
+				"url": "https://github.com/scottgonzalez/github-request/issues"
+			},
+			"author": {
+				"name": "Scott González",
+				"email": "scott.gonzalez@gmail.com",
+				"url": "http://scottgonzalez.com"
+			},
+			"main": "./lib/request.js",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/scottgonzalez/github-request.git"
+			},
+			"gitHead": "f7e48a768cb95465d7222a255d4454420039019e",
+			"_id": "github-request@1.2.0",
+			"scripts": {},
+			"_shasum": "719281d47b5a483557dc7cd26d6239db6f223254",
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "scott.gonzalez",
+				"email": "scott.gonzalez@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "scott.gonzalez",
+					"email": "scott.gonzalez@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "719281d47b5a483557dc7cd26d6239db6f223254",
+				"tarball": "https://registry.npmjs.org/github-request/-/github-request-1.2.0.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.2.1": {
+			"name": "github-request",
+			"version": "1.2.1",
+			"description": "Simplified GitHub API requests.",
+			"keywords": [
+				"github",
+				"request"
+			],
+			"homepage": "https://github.com/scottgonzalez/github-request",
+			"bugs": {
+				"url": "https://github.com/scottgonzalez/github-request/issues"
+			},
+			"author": {
+				"name": "Scott González",
+				"email": "scott.gonzalez@gmail.com",
+				"url": "http://scottgonzalez.com"
+			},
+			"main": "./lib/request.js",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/scottgonzalez/github-request.git"
+			},
+			"gitHead": "dff21709c18bea9c960d2db6abef014bdc12378b",
+			"_id": "github-request@1.2.1",
+			"scripts": {},
+			"_shasum": "ea8a9267c94be22b9dd0afe629ddce04fcbbce1d",
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "scott.gonzalez",
+				"email": "scott.gonzalez@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "scott.gonzalez",
+					"email": "scott.gonzalez@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "ea8a9267c94be22b9dd0afe629ddce04fcbbce1d",
+				"tarball": "https://registry.npmjs.org/github-request/-/github-request-1.2.1.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.2.2": {
+			"name": "github-request",
+			"version": "1.2.2",
+			"description": "Simplified GitHub API requests.",
+			"keywords": [
+				"github",
+				"request"
+			],
+			"homepage": "https://github.com/scottgonzalez/github-request",
+			"bugs": {
+				"url": "https://github.com/scottgonzalez/github-request/issues"
+			},
+			"author": {
+				"name": "Scott González",
+				"email": "scott.gonzalez@gmail.com",
+				"url": "http://scottgonzalez.com"
+			},
+			"main": "./lib/request.js",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/scottgonzalez/github-request.git"
+			},
+			"gitHead": "bec76ffe4854901aee0a4d589934acbc6a5cc589",
+			"_id": "github-request@1.2.2",
+			"scripts": {},
+			"_shasum": "a60022753a4212c4426cbaafc0478bb4d8252bdb",
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "scott.gonzalez",
+				"email": "scott.gonzalez@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "scott.gonzalez",
+					"email": "scott.gonzalez@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "a60022753a4212c4426cbaafc0478bb4d8252bdb",
+				"tarball": "https://registry.npmjs.org/github-request/-/github-request-1.2.2.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.2.3": {
+			"name": "github-request",
+			"version": "1.2.3",
+			"description": "Simplified GitHub API requests.",
+			"keywords": [
+				"github",
+				"request"
+			],
+			"homepage": "https://github.com/scottgonzalez/github-request",
+			"bugs": {
+				"url": "https://github.com/scottgonzalez/github-request/issues"
+			},
+			"author": {
+				"name": "Scott González",
+				"email": "scott.gonzalez@gmail.com",
+				"url": "http://scottgonzalez.com"
+			},
+			"main": "./lib/request.js",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/scottgonzalez/github-request.git"
+			},
+			"gitHead": "e94973a48cdffb0f9c7f10b134c03ead1ecc506e",
+			"_id": "github-request@1.2.3",
+			"scripts": {},
+			"_shasum": "cb0a34cb0ad07caf417072bff88a8b59f1738389",
+			"_from": ".",
+			"_npmVersion": "1.4.28",
+			"_npmUser": {
+				"name": "scott.gonzalez",
+				"email": "scott.gonzalez@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "scott.gonzalez",
+					"email": "scott.gonzalez@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "cb0a34cb0ad07caf417072bff88a8b59f1738389",
+				"tarball": "https://registry.npmjs.org/github-request/-/github-request-1.2.3.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.2.4": {
+			"name": "github-request",
+			"version": "1.2.4",
+			"description": "Simplified GitHub API requests.",
+			"keywords": [
+				"github",
+				"request"
+			],
+			"homepage": "https://github.com/scottgonzalez/github-request",
+			"bugs": {
+				"url": "https://github.com/scottgonzalez/github-request/issues"
+			},
+			"author": {
+				"name": "Scott González",
+				"email": "scott.gonzalez@gmail.com",
+				"url": "http://scottgonzalez.com"
+			},
+			"main": "./lib/request.js",
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/scottgonzalez/github-request.git"
+			},
+			"gitHead": "b93cb423e7bcb8aff5d03404e13f5da2258a4ad8",
+			"_id": "github-request@1.2.4",
+			"scripts": {},
+			"_shasum": "48f64ddbaad21fd805fb5d97f5a55487447bfb49",
+			"_from": ".",
+			"_npmVersion": "3.6.0",
+			"_nodeVersion": "5.3.0",
+			"_npmUser": {
+				"name": "scott.gonzalez",
+				"email": "scott.gonzalez@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "scott.gonzalez",
+					"email": "scott.gonzalez@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "48f64ddbaad21fd805fb5d97f5a55487447bfb49",
+				"tarball": "https://registry.npmjs.org/github-request/-/github-request-1.2.4.tgz"
+			},
+			"_npmOperationalInternal": {
+				"host": "packages-13-west.internal.npmjs.com",
+				"tmp": "tmp/github-request-1.2.4.tgz_1458323968718_0.5604087065439671"
+			},
+			"directories": {},
+			"contributors": []
+		}
+	},
+	"time": {
+		"modified": "2016-03-18T17:59:29.130Z",
+		"created": "2013-07-03T13:02:44.621Z",
+		"1.0.0": "2013-07-03T13:02:45.739Z",
+		"1.1.0": "2013-12-04T19:38:04.937Z",
+		"1.2.0": "2014-12-15T20:56:51.582Z",
+		"1.2.1": "2014-12-22T18:01:02.937Z",
+		"1.2.2": "2015-01-28T13:07:35.579Z",
+		"1.2.3": "2015-03-23T16:00:11.189Z",
+		"1.2.4": "2016-03-18T17:59:29.130Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.2.4"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"8aac46f319c18dda1aaf45524f85ee31\"",
+			"fetched": 1618960284192
+		}
+	},
+	"_distfiles": {
+		"github-request-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/github-request/-/github-request-1.0.0.tgz",
+			"sha": "7e96dbeb730518ef4f15a70db835b2768089fe0c",
+			"registry": "npmjs"
+		},
+		"github-request-1.1.0.tgz": {
+			"url": "https://registry.npmjs.org/github-request/-/github-request-1.1.0.tgz",
+			"sha": "0330ac99b7efad54e8edd30f305165f47ed167ca",
+			"registry": "npmjs"
+		},
+		"github-request-1.2.0.tgz": {
+			"url": "https://registry.npmjs.org/github-request/-/github-request-1.2.0.tgz",
+			"sha": "719281d47b5a483557dc7cd26d6239db6f223254",
+			"registry": "npmjs"
+		},
+		"github-request-1.2.1.tgz": {
+			"url": "https://registry.npmjs.org/github-request/-/github-request-1.2.1.tgz",
+			"sha": "ea8a9267c94be22b9dd0afe629ddce04fcbbce1d",
+			"registry": "npmjs"
+		},
+		"github-request-1.2.2.tgz": {
+			"url": "https://registry.npmjs.org/github-request/-/github-request-1.2.2.tgz",
+			"sha": "a60022753a4212c4426cbaafc0478bb4d8252bdb",
+			"registry": "npmjs"
+		},
+		"github-request-1.2.3.tgz": {
+			"url": "https://registry.npmjs.org/github-request/-/github-request-1.2.3.tgz",
+			"sha": "cb0a34cb0ad07caf417072bff88a8b59f1738389",
+			"registry": "npmjs"
+		},
+		"github-request-1.2.4.tgz": {
+			"url": "https://registry.npmjs.org/github-request/-/github-request-1.2.4.tgz",
+			"sha": "48f64ddbaad21fd805fb5d97f5a55487447bfb49",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {
+		"github-request-1.2.4.tgz": {
+			"shasum": "48f64ddbaad21fd805fb5d97f5a55487447bfb49"
+		}
+	},
+	"_rev": "2-532ef2d738739bad",
+	"_id": "github-request",
+	"readme": "# GitHub Request\n\nSimplified GitHub API requests.\n\nSupport this project by [donating on Gratipay](https://gratipay.com/scottgonzalez/).\n\n## About\n\nLow level helper for working with the GitHub API.\n\n## Installation\n\n```sh\nnpm install github-request\n```\n\n## Usage\n\n```js\nvar github = require(\"github-request\");\ngithub.request({\n\tpath: \"/orgs/jquery/repos\"\n}, function(error, repos) {\n\tconsole.log(repos);\n});\n```\n\n## API\n\n### request(settings, data, callback)\n\nPerforms a single request based on the provided settings.\n\n* `settings` (Object): Settings for the HTTPS request.\n* `data` (Mixed): Data to pass for POST requests. Data is encoded as JSON prior to making the request.\n* `callback` (`function( error, response, meta )`): A callback to invoke when the API call is complete.\n  * `response` (Object): The parsed JSON response.\n  * `meta` (Object): Metadata from the response headers.\n\n### requestAll(settings, callback)\n\nPerforms a request based on the provided settings and then requests any additional paged content based on the response. Data from all pages are concatenated together and buffered until the last page of data has been retrieved.\n\n* `settings` (Object): Settings for the HTTPS request.\n* `callback` (`function( error, response, meta )`): A callback to invoke when all API calls are complete.\n  * `response` (Object): The parsed JSON response.\n  * `meta` (Object): Metadata from the headers of the *last* response.\n\n### Response Metadata\n\nThe metadata provided contains information from the following headers:\n\n* `x-ratelimit-*`\n* `x-github-*`\n* `link`\n\nThese headers are parsed into a more friendly format before being passed as the `meta` parameter in the `callback`.\n\nAll `x-*` headers have the `x-` prefix removed and the names are changed from dashed form to camel case. For example, `x-ratelimit-remaining` becomes `ratelimitRemaining`.\n\nThe `link` header is parsed into the named `rel` values. For example, `<https://api.github.com/resource?page=2>; rel=\"next\"` becomes `{next: \"https://api.github.com/resource?page=2\"}` and is provided in the `links` property.\n\n## License\n\nCopyright Scott González. Released under the terms of the MIT license.\n\n---\n\nSupport this project by [donating on Gratipay](https://gratipay.com/scottgonzalez/)."
+}

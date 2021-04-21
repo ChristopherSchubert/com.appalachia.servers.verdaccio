@@ -1,0 +1,100 @@
+{
+	"name": "com.appalachia.node.html-diff",
+	"versions": {
+		"1.0.2": {
+			"name": "com.appalachia.node.html-diff",
+			"displayName": "Appalachia Interactive HTML-diff",
+			"version": "1.0.2",
+			"description": "Generate colorized HTML diffs.  Useful for tracking changes to Apache-licensed repositories.",
+			"keywords": [
+				"Scripts",
+				"Tool",
+				"git",
+				"diff"
+			],
+			"author": {
+				"name": "Appalachia Interactive"
+			},
+			"icon": "media/icon.png",
+			"publishConfig": {
+				"registry": "http://localhost:4873/"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git://github.com/AppalachiaInteractive/com.appalachia.node.html-diff.git"
+			},
+			"homepage": "https://github.com/AppalachiaInteractive/com.appalachia.node.html-diff",
+			"bugs": {
+				"url": "https://github.com/AppalachiaInteractive/com.appalachia.node.html-diff/issues"
+			},
+			"licenses": [
+				{
+					"type": "MIT",
+					"url": "https://github.com/AppalachiaInteractive/com.appalachia.node.html-diff/blob/master/LICENSE.md"
+				},
+				{
+					"type": "MIT",
+					"url": "https://github.com/scottgonzalez/pretty-diff/blob/master/LICENSE.txt"
+				}
+			],
+			"scripts": {
+				"preversion": "bash ~/com.appalachia/appa/appa.sh package preversion",
+				"version": "bash ~/com.appalachia/appa/appa.sh package version",
+				"postversion": "bash ~/com.appalachia/appa/appa.sh package postversion",
+				"prepack": "bash ~/com.appalachia/appa/appa.sh package prepack",
+				"postpack": "bash ~/com.appalachia/appa/appa.sh package postpack",
+				"prepublishOnly": "bash ~/com.appalachia/appa/appa.sh package prepublishOnly",
+				"publish": "bash ~/com.appalachia/appa/appa.sh package publish",
+				"postpublish": "bash ~/com.appalachia/appa/appa.sh package postpublish",
+				"test": "mocha"
+			},
+			"bin": {
+				"git-gist-diff": "gist-diff.js",
+				"git-html-diff": "html-diff.js",
+				"gist-diff": "gist-diff.js",
+				"html-diff": "html-diff.js"
+			},
+			"dependencies": {
+				"chai": "^4.3.4",
+				"github-request": "1.2.4",
+				"mocha": "^8.3.2",
+				"mocha-sinon": "^2.1.2",
+				"open": "6.4.0",
+				"sinon": "^10.0.0"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"_from": "file:.dist\\com.appalachia.node.html-diff-1.0.2.tgz",
+			"readmeFilename": "readme.md",
+			"_id": "com.appalachia.node.html-diff@1.0.2",
+			"_nodeVersion": "14.16.1",
+			"_npmVersion": "6.14.12",
+			"dist": {
+				"integrity": "sha512-yDeoCrynZbhMBZUQ+1VPC+VQKalFA/PHm2mSh98NqCZuUab2TBGRCn3rhzYJwhhMj3/2HUDPlwOeKP4hMFmgjQ==",
+				"shasum": "a38ba7c7cc2dfdbe00bd1e730a43907c9fc40186",
+				"tarball": "http://localhost:4873/com.appalachia.node.html-diff/-/com.appalachia.node.html-diff-1.0.2.tgz"
+			},
+			"contributors": []
+		}
+	},
+	"time": {
+		"modified": "2021-04-20T23:07:31.183Z",
+		"created": "2021-04-20T23:07:31.183Z",
+		"1.0.2": "2021-04-20T23:07:31.183Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.0.2"
+	},
+	"_uplinks": {},
+	"_distfiles": {},
+	"_attachments": {
+		"com.appalachia.node.html-diff-1.0.2.tgz": {
+			"shasum": "a38ba7c7cc2dfdbe00bd1e730a43907c9fc40186",
+			"version": "1.0.2"
+		}
+	},
+	"_rev": "4-847ee9a2902caa24",
+	"_id": "com.appalachia.node.html-diff",
+	"readme": "# HTML Diff\r\n\r\nHTML diff generates colorized HTML diffs similar to the diff/commit views on GitHub.\r\nSimply use `html-diff` the same way you use `git diff` and you'll get html diffs.\r\nIf you want to share the diff, you can use `gist-diff` and you'll get a new gist.\r\n\r\n![image](https://cloud.githubusercontent.com/assets/39191/10147714/8c358910-65e4-11e5-8e59-e1526ef674cd.png)\r\n\r\n\r\n## Installation\r\n\r\nSimply install globally via npm:\r\n\r\n```sh\r\nnpm install -g html-diff\r\n```\r\n\r\n## Usage\r\n\r\n### html-diff\r\n\r\n`html-diff` has no settings of its own.\r\nSimply provide whatever settings you want to pass to `git diff`.\r\n\r\nFor example, to see what changed in the last commit:\r\n\r\n```sh\r\nhtml-diff HEAD^\r\n```\r\n\r\n### gist-diff\r\n\r\n`gist-diff` has one setting: `--public`.\r\nBy default `gist-diff` will generate a private gist.\r\nIf `--public` is provided, the gist will be public.\r\nThis setting can be specified anywhere (before or after the `git diff` settings).\r\n\r\n`gist-diff` will attempt to create the gist using your GitHub account.\r\nIn order to create the gist with your account, you will be prompted for your password.\r\nIf you enter no password, then an anonymous gist will be generated.\r\nHowever, if you enter an incorrect password, then no gist will be generated.\r\n\r\n#### Authentication\r\n\r\nIf you set your GitHub username in your git config, you will only be prompted for your password.\r\n\r\n```sh\r\ngit config --global github.user \"Your Username\"\r\n```\r\n\r\nTo avoid being prompted for your password, you can\r\n[create a personal access token](https://github.com/settings/applications) and\r\nstore it in your git config. You don't need to set `github.user` if you're using\r\na token.\r\n\r\n```sh\r\ngit config --global gist-diff.token \"Your token\"\r\n```"
+}

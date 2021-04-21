@@ -1,0 +1,429 @@
+{
+	"name": "private-extension-manager",
+	"versions": {
+		"1.5.0": {
+			"name": "private-extension-manager",
+			"displayName": "Private Extension Manager",
+			"description": "Manages extensions hosted in private NPM registries.",
+			"version": "1.5.0",
+			"engines": {
+				"vscode": "^1.55.0"
+			},
+			"categories": [
+				"Other"
+			],
+			"author": {
+				"name": "Appaclachia Interactive"
+			},
+			"publisher": "appalachia",
+			"keywords": [
+				"Scripts",
+				"Tool",
+				"git",
+				"diff"
+			],
+			"icon": "media/icon.png",
+			"publishConfig": {
+				"registry": "http://localhost:4873/"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager.git"
+			},
+			"homepage": "https://github.com/AppalachiaInteractive/com.appalachia.node.html-diff",
+			"bugs": {
+				"url": "https://github.com/AppalachiaInteractive/com.appalachia.node.html-diff/issues"
+			},
+			"licenses": [
+				{
+					"type": "MIT",
+					"url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager/blob/master/LICENSE.md"
+				},
+				{
+					"type": "Apache-2.0",
+					"url": "https://raw.githubusercontent.com/joelspadin-garmin/vscode-private-extension-manager/master/extension/LICENSE"
+				}
+			],
+			"extensionKind": [
+				"workspace",
+				"web"
+			],
+			"activationEvents": [
+				"workspaceContains:.vscode/extensions.private.json",
+				"onView:privateExtensions.extensions",
+				"onView:privateExtensions.recommended",
+				"onCommand:privateExtensions.cache.delete",
+				"onCommand:privateExtensions.cache.garbageCollect",
+				"onCommand:privateExtensions.checkForUpdates",
+				"onCommand:privateExtensions.configureWorkspaceRegistries",
+				"onCommand:privateExtensions.configureRecommendedExtensions",
+				"onCommand:privateExtensions.registry.add",
+				"onCommand:privateExtensions.registry.remove"
+			],
+			"main": "./dist/extension.js",
+			"contributes": {
+				"jsonValidation": [
+					{
+						"fileMatch": "extensions.private.json",
+						"url": "./extensions.private.schema.json"
+					}
+				],
+				"languages": [
+					{
+						"id": "jsonc",
+						"filenames": [
+							"extensions.private.json"
+						]
+					}
+				],
+				"configuration": {
+					"type": "object",
+					"title": "%configuration.title%",
+					"properties": {
+						"privateExtensions.registries": {
+							"type": "array",
+							"scope": "machine",
+							"description": "%configuration.registries.description%"
+						},
+						"privateExtensions.channels": {
+							"type": "object",
+							"scope": "machine",
+							"description": "%configuration.channels.description%"
+						},
+						"privateExtensions.updateCheckInterval": {
+							"type": "number",
+							"scope": "machine",
+							"description": "%configuration.updateCheckInterval.description%",
+							"default": 3600
+						}
+					}
+				},
+				"commands": [
+					{
+						"command": "privateExtensions.cache.delete",
+						"title": "%command.cache.delete.title%",
+						"category": "%command.category%"
+					},
+					{
+						"command": "privateExtensions.cache.garbageCollect",
+						"title": "%command.cache.garbageCollect.title%",
+						"category": "%command.category%"
+					},
+					{
+						"command": "privateExtensions.checkForUpdates",
+						"title": "%command.checkForUpdates.title%",
+						"category": "%command.category%"
+					},
+					{
+						"command": "privateExtensions.configureWorkspaceRegistries",
+						"title": "%command.configureWorkspaceRegistries.title%",
+						"category": "%command.category%",
+						"icon": "$(edit)"
+					},
+					{
+						"command": "privateExtensions.configureRecommendedExtensions",
+						"title": "%command.configureRecommendedExtensions.title%",
+						"category": "%command.category%",
+						"icon": "$(edit)"
+					},
+					{
+						"command": "privateExtensions.refresh",
+						"title": "%command.refresh.title%",
+						"category": "%command.category%",
+						"icon": "$(refresh)"
+					},
+					{
+						"command": "privateExtensions.extension.install",
+						"title": "%command.extension.install.title%"
+					},
+					{
+						"command": "privateExtensions.extension.uninstall",
+						"title": "%command.extension.uninstall.title%"
+					},
+					{
+						"command": "privateExtensions.extension.update",
+						"title": "%command.extension.update.title%",
+						"icon": {
+							"light": "media/light/update.svg",
+							"dark": "media/dark/update.svg"
+						}
+					},
+					{
+						"command": "privateExtensions.extension.install.anotherVersion",
+						"title": "%command.extension.install.anotherVersion.title%"
+					},
+					{
+						"command": "privateExtensions.extension.switchChannels",
+						"title": "%command.extension.switchChannels.title%"
+					},
+					{
+						"command": "privateExtensions.extension.copyInformation",
+						"title": "%command.extension.copyInformation.title%"
+					},
+					{
+						"command": "privateExtensions.registry.add",
+						"title": "%command.registry.add.title%",
+						"category": "%command.category%",
+						"icon": "$(new-folder)"
+					},
+					{
+						"command": "privateExtensions.registry.remove",
+						"title": "%command.registry.remove.title%",
+						"category": "%command.category%"
+					}
+				],
+				"viewsContainers": {
+					"activitybar": [
+						{
+							"id": "privateExtensions",
+							"title": "%viewsContainers.activitybar.privateExtensions.title%",
+							"icon": "media/extensions.svg"
+						}
+					]
+				},
+				"views": {
+					"privateExtensions": [
+						{
+							"id": "privateExtensions.extensions",
+							"name": "%views.privateExtensions.extensions.name%"
+						},
+						{
+							"id": "privateExtensions.recommended",
+							"name": "%views.privateExtensions.recommended.name%"
+						}
+					]
+				},
+				"viewsWelcome": [
+					{
+						"view": "privateExtensions.extensions",
+						"contents": "%views.privateExtensions.extensions.noExtensions%"
+					},
+					{
+						"view": "privateExtensions.extensions",
+						"contents": "%views.privateExtensions.extensions.configure%",
+						"when": "workbenchState != empty"
+					},
+					{
+						"view": "privateExtensions.recommended",
+						"contents": "%views.privateExtensions.recommended.noExtensions%"
+					},
+					{
+						"view": "privateExtensions.recommended",
+						"contents": "%views.privateExtensions.recommended.configure%",
+						"when": "workbenchState != empty"
+					}
+				],
+				"menus": {
+					"view/title": [
+						{
+							"command": "privateExtensions.configureWorkspaceRegistries",
+							"when": "view == privateExtensions.extensions && workbenchState != empty",
+							"group": "navigation"
+						},
+						{
+							"command": "privateExtensions.refresh",
+							"when": "view == privateExtensions.extensions",
+							"group": "navigation"
+						},
+						{
+							"command": "privateExtensions.checkForUpdates",
+							"when": "view == privateExtensions.extensions",
+							"group": "extensions"
+						},
+						{
+							"command": "privateExtensions.registry.add",
+							"when": "view == privateExtensions.extensions",
+							"group": "registry"
+						},
+						{
+							"command": "privateExtensions.configureRecommendedExtensions",
+							"when": "view == privateExtensions.recommended && workbenchState != empty",
+							"group": "navigation"
+						}
+					],
+					"view/item/context": [
+						{
+							"command": "privateExtensions.extension.install",
+							"when": "view =~ /^privateExtensions/ && viewItem =~ /available/",
+							"group": "install"
+						},
+						{
+							"command": "privateExtensions.extension.uninstall",
+							"when": "view =~ /^privateExtensions/ && viewItem =~ /installed|update/",
+							"group": "install"
+						},
+						{
+							"command": "privateExtensions.extension.update",
+							"when": "view =~ /^privateExtensions/ && viewItem =~ /update/",
+							"group": "inline"
+						},
+						{
+							"command": "privateExtensions.extension.install.anotherVersion",
+							"when": "view =~ /^privateExtensions/ && viewItem =~ /installed|update/",
+							"group": "installVersion"
+						},
+						{
+							"command": "privateExtensions.extension.switchChannels",
+							"when": "view =~ /^privateExtensions/ && viewItem =~ /installed|update/",
+							"group": "installVersion"
+						},
+						{
+							"command": "privateExtensions.extension.copyInformation",
+							"when": "view =~ /^privateExtensions/ && viewItem =~ /extension/",
+							"group": "other"
+						},
+						{
+							"command": "privateExtensions.registry.remove",
+							"when": "view == privateExtensions.extensions && viewItem == registry.user",
+							"group": "registries"
+						}
+					],
+					"commandPalette": [
+						{
+							"command": "privateExtensions.refresh",
+							"when": "false"
+						},
+						{
+							"command": "privateExtensions.extension.install",
+							"when": "false"
+						},
+						{
+							"command": "privateExtensions.extension.uninstall",
+							"when": "false"
+						},
+						{
+							"command": "privateExtensions.extension.update",
+							"when": "false"
+						},
+						{
+							"command": "privateExtensions.extension.install.anotherVersion",
+							"when": "false"
+						},
+						{
+							"command": "privateExtensions.extension.switchChannels",
+							"when": "false"
+						},
+						{
+							"command": "privateExtensions.extension.copyInformation",
+							"when": "false"
+						}
+					]
+				}
+			},
+			"scripts": {
+				"vscode:prepublish": "npm run package",
+				"preversion": "bash ~/com.appalachia/appa/appa package preversion",
+				"version": "bash ~/com.appalachia/appa/appa package version",
+				"postversion": "bash ~/com.appalachia/appa/appa package postversion-vscode",
+				"compile": "webpack",
+				"watch": "webpack --watch",
+				"package": "webpack --mode production --devtool hidden-source-map",
+				"test-compile": "tsc -p ./",
+				"test-watch": "tsc -watch -p ./",
+				"pretest": "npm run test-compile && npm run lint",
+				"lint": "eslint src --ext ts",
+				"test": "node ./out/test/runTest.js"
+			},
+			"devDependencies": {
+				"@types/cacache": "^12.0.1",
+				"@types/chai": "^4.2.14",
+				"@types/chai-subset": "^1.3.3",
+				"@types/glob": "^7.1.3",
+				"@types/is-unc-path": "^1.0.0",
+				"@types/libnpmsearch": "^2.0.1",
+				"@types/mocha": "^8.0.4",
+				"@types/node": "^12.19.6",
+				"@types/npm-package-arg": "^6.1.0",
+				"@types/npm-registry-fetch": "^8.0.0",
+				"@types/pacote": "^11.1.0",
+				"@types/rimraf": "^3.0.0",
+				"@types/semver": "^7.3.4",
+				"@types/sinon": "^9.0.8",
+				"@types/source-map-support": "^0.5.3",
+				"@types/valid-url": "^1.0.3",
+				"@types/vscode": "^1.51.0",
+				"@typescript-eslint/eslint-plugin": "^4.8.1",
+				"@typescript-eslint/parser": "^4.8.1",
+				"chai": "^4.2.0",
+				"chai-subset": "^1.6.0",
+				"chai-subset-in-order": "^3.0.0",
+				"eslint": "^7.13.0",
+				"eslint-config-prettier": "^8.1.0",
+				"eslint-import-resolver-typescript": "^2.3.0",
+				"eslint-plugin-import": "^2.22.1",
+				"eslint-plugin-prettier": "^3.1.4",
+				"json-loader": "^0.5.7",
+				"license-checker-webpack-plugin": "^0.2.1",
+				"lodash.template": "^4.5.0",
+				"mocha": "^8.2.1",
+				"nock": "^13.0.5",
+				"prettier": "^2.2.0",
+				"sinon": "^10.0.0",
+				"source-map-support": "^0.5.19",
+				"ts-loader": "^8.0.11",
+				"typescript": "^4.1.2",
+				"vsce": "^1.81.1",
+				"vscode-test": "^1.4.1",
+				"webpack": "^5.31.0",
+				"webpack-cli": "^4.6.0"
+			},
+			"dependencies": {
+				"cacache": "^12.0.4",
+				"fp-ts": "^2.8.6",
+				"glob": "^7.1.6",
+				"io-ts": "^2.2.12",
+				"is-unc-path": "^1.0.0",
+				"jsonc-parser": "^3.0.0",
+				"libnpmsearch": "^2.0.2",
+				"memoize-one": "^5.1.1",
+				"node-noop": "^1.0.0",
+				"npm-package-arg": "^8.1.0",
+				"npm-registry-fetch": "^4.0.7",
+				"pacote": "^9.5.12",
+				"rimraf": "^3.0.2",
+				"sanitize-filename": "^1.6.3",
+				"semver": "^7.3.2",
+				"valid-url": "^1.0.9",
+				"vscode-nls": "^5.0.0"
+			},
+			"prettier": {
+				"singleQuote": true,
+				"trailingComma": "all",
+				"tabWidth": 4,
+				"printWidth": 120,
+				"endOfLine": "auto"
+			},
+			"readmeFilename": "README.md",
+			"gitHead": "6d015205503baf28195df761f5e843e4b95a4f86",
+			"_id": "private-extension-manager@1.5.0",
+			"_nodeVersion": "14.16.1",
+			"_npmVersion": "6.14.12",
+			"dist": {
+				"integrity": "sha512-YRzoFMuJYZW0kYC/IOMsFOecvb+S5dfgB2apHjPOsvSytJTtISgGzl+fqdUnPogBhaM/ahWbeF+WTDl98zUtNg==",
+				"shasum": "364df8979101a53e8f8bfaff194639e496027e8c",
+				"tarball": "http://localhost:4873/private-extension-manager/-/private-extension-manager-1.5.0.tgz"
+			},
+			"contributors": []
+		}
+	},
+	"time": {
+		"modified": "2021-04-21T00:17:54.517Z",
+		"created": "2021-04-20T23:47:49.051Z",
+		"1.5.0": "2021-04-20T23:47:49.051Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "1.5.0"
+	},
+	"_uplinks": {},
+	"_distfiles": {},
+	"_attachments": {
+		"private-extension-manager-1.5.0.tgz": {
+			"shasum": "364df8979101a53e8f8bfaff194639e496027e8c",
+			"version": "1.5.0"
+		}
+	},
+	"_rev": "9-d54f4ef76153bc2a",
+	"_id": "private-extension-manager",
+	"readme": "# Private Extension Manager\r\n\r\n[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)\r\n\r\nPrivate Extension Manager lets you find, install, and update extensions from any\r\nNPM registry. This lets you distribute organization-specific extensions using a\r\nprivate registry server such as [Sonatype Nexus](https://www.sonatype.com/product-nexus-repository)\r\nor [Verdaccio](https://verdaccio.org).\r\n\r\n# Managing Extensions\r\n\r\nSelect the **Private Extensions** icon on the activity bar:\r\n\r\n![Activity Bar Icon](https://raw.githubusercontent.com/joelspadin-garmin/vscode-private-extension-manager/master/extension/media/readme/activity-bar.png)\r\n\r\nThis works similarly to Visual Studio Code's built-in extensions manager and\r\nallows you to install, update, and uninstall private extensions.\r\n\r\nBy default, the view will be empty. You will need to publish extensions to your\r\nprivate registry and tell the extension manager how to find the registry before\r\nyou can use it.\r\n\r\n# Setup\r\n\r\n## Publishing Extensions\r\n\r\nTo allow Private Extension Manager to find your extension,\r\n[package it in the VSIX format using vsce](https://code.visualstudio.com/api/working-with-extensions/publishing-extension),\r\ncreate an NPM package containing the .vsix file, and publish it to an NPM\r\nregistry. Your extension's `package.json` must contain a `files` array with the\r\npath to the .vsix file so the extension manager knows what to install. Use\r\n`vsce package` in a [`prepublishOnly` script](https://docs.npmjs.com/misc/scripts)\r\nto ensure that your NPM packages always contain an up-to-date extension package.\r\n\r\nNote that when Private Extension Manager displays the details for an extension,\r\nit will unpack the latest version of the NPM package to read its README and\r\nCHANGELOG files, but it will not unpack the .vsix file. If your extension has an\r\nicon, ensure that it is either accessible via HTTPS or included directly in your\r\nNPM package by referencing it in the `package.json`'s `files` array.\r\n\r\nVisual Studio Code does not support scoped extension names such as\r\n`@my-org/my-extension`. It is recommended that you create a registry that only\r\ncontains Visual Studio Code extensions to avoid name collisions. If you need to\r\npublish to a registry that contains packages that are not Visual Studio Code\r\nextensions, add a `keywords` field to your `package.json` and tag all your\r\nextensions with the same keyword so you can filter to just extensions, or ensure\r\nthat all non-extension packages are scoped.\r\n\r\nUse `publishConfig` to set the registry to which the extension should be\r\npublished. You may also need to authenticate with this registry using\r\n`npm login --registry=<url>`. Use `npm publish .` to publish your extension\r\n(not `vsce publish`, as that publishes to the public extensions gallery).\r\n\r\nYour `package.json` should look like a regular\r\n[extension manifest](https://code.visualstudio.com/api/references/extension-manifest)\r\nbut with extra `files` and `publishConfig` fields and a `prepublishOnly` script\r\nto handle the NPM-specific behavior:\r\n\r\n```JSON\r\n{\r\n    \"name\": \"example-extension\",\r\n    \"displayName\": \"Example Extension\",\r\n    \"description\": \"This is an example extension.\",\r\n    \"version\": \"1.2.3\",\r\n    \"author\": {\r\n        \"name\": \"John Doe\",\r\n        \"email\": \"John.Doe@garmin.com\"\r\n    },\r\n    \"publisher\": \"garmin\",\r\n    \"engines\": {\r\n        \"vscode\": \"^1.40.0\"\r\n    },\r\n    \"icon\": \"media/icon.png\",\r\n    \"files\": [\r\n        \"extension.vsix\",\r\n        \"media/icon.png\"\r\n    ],\r\n    \"publishConfig\": {\r\n        \"registry\": \"https://my-private.registry\"\r\n    },\r\n    \"scripts\": {\r\n        \"prepublishOnly\": \"vsce package -o extension.vsix\",\r\n        ...\r\n    },\r\n    \"devDependencies\": {\r\n        \"vsce\": \"^1.69.0\",\r\n        ...\r\n    }\r\n    ...\r\n}\r\n```\r\n\r\n**Note:** `prepare` scripts will **not** be run before installing the extension.\r\nIf you have native dependencies, instead of using node-gyp to build them on the\r\nuser's machine, you should build them yourself for each supported platform and\r\ninclude them in the .vsix or host them on a server and have your extension\r\ndownload them at runtime.\r\n\r\n### OS specific Extensions\r\n\r\nBy default, the first .vsix file in the files array is used. If you have different\r\nnative dependencies for each platform, you can use osSpecificVsix to choose a .vsix\r\nfile by the [operating system](https://nodejs.org/api/os.html#os_os_platform).\r\n\r\n```JSON\r\n    ...\r\n    \"osSpecificVsix\": {\r\n        \"linux\": \"extension-linux.vsix\",\r\n        \"win32\": \"extension-win32.vsix\",\r\n        \"default\": \"extension-default.vsix\",\r\n    },\r\n    ...\r\n```\r\n\r\nThe package must include all files listed. `default` (*optional*) is used to select\r\na file in case none of the explicit keys matches; otherwise an error is shown on\r\nunsupported platforms.\r\n\r\n## Discovering Extensions\r\n\r\nNow that your extensions are published to an NPM registry, you need to tell\r\nPrivate Extension Manager how to find them. This can be done using a workspace\r\nconfig file and/or a user setting.\r\n\r\n### Workspace Configuration\r\n\r\nPrivate Extension Manager uses a config file similar to Visual Studio Code's\r\n`extensions.json` to allow workspaces to recommend extensions. Create a file\r\nnamed `.vscode/extensions.private.json` in any workspace folder to define your\r\nprivate extension registries and any recommended extensions. You can use the\r\n**Private Extensions: Configure Recommended Extensions** or\r\n**Private Extensions: Configure Workspace Registries** commands to open this\r\nfile, creating it from a template if it does not already exist.\r\n\r\nThe file has the following structure:\r\n\r\n```JSON\r\n{\r\n    \"registries\": [\r\n        {\r\n            \"name\": \"My Private Registry\",\r\n            \"registry\": \"https://my-private.registry\",\r\n        }\r\n    ],\r\n    \"recommendations\": [\r\n        \"garmin.example-extension\"\r\n    ]\r\n}\r\n```\r\n\r\nThe `registries` array defines one or more NPM registries to search for private\r\nextensions. Each item supports the following fields:\r\n\r\n* **name**: Name to display for the registry.\r\n* **registry**: (Optional) The address of the NPM registry which contains the extension packages.\r\n    If omitted, the registry is determined according to standard [NPM config files](https://docs.npmjs.com/files/npmrc).\r\n* **query**: (Optional) Display only packages that match this [search query](https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md#get-v1search).\r\n    This is either an array of search terms or a string with space-delimited terms.\r\n    For example, `\"keywords:group1 keywords:group2\"` would display only packages\r\n    that have the either of the keywords `group1` or `group2`.\r\n* **enablePagination**: (Optional) If `true`, keep requesting more package results from the registry\r\n    until it gives an empty response. If `false`, make only one request. This defaults to `true`.\r\n    Set it to false when using a server that doesn't properly handle the `from` parameter of the NPM search API.\r\n    You may also need to increase `limit` to get all results if this is disabled.\r\n* **limit**: (Optional) Number of results to limit each query to when requesting package results. Default: 100.\r\n* Any options supported by [npm-registry-fetch](https://github.com/npm/npm-registry-fetch#-fetch-options).\r\n    Use these if you need to set authentication, a proxy, or other options.\r\n\r\nThe `recommendations` array is an optional list of private extensions from any\r\nof the registries which should be recommended for users of the workspace.\r\nThe identifier of an extension is always `\"${publisher}.${name}\"`.\r\nFor example: `\"garmin.private-extension-manager\"`.\r\n\r\nYou may have multiple workspace folders that contain an `extensions.private.json`\r\nfile. The extension manager will display the registries and recommendations from\r\nall of them.\r\n\r\n**Note:** if the `query` option is omitted, the query text will be a single\r\nasterisk. Some registry servers such as Verdaccio do not respond to this with\r\nall available packages, so you may need to set `query` to get any results at all.\r\n\r\n### User Configuration\r\n\r\nEach user may also specify registries to use regardless of which workspace is\r\nopen with the `privateExtensions.registries` setting. This has the same format\r\nas the `registries` array in `extensions.private.json`.\r\n\r\nYou can use the **Private Extensions: Add Registry...** and\r\n**Private Extensions: Remove Registry** commands to quickly edit this setting.\r\n\r\n### Custom Channels\r\n\r\nIt is possible to create tracking channels by using npm dist-tags when\r\npublishing a private extension. This lets you publish pre-release or other\r\nspecial versions of an extension without updating all users to them. Only users\r\nwho are tracking the specific release channel will get the updates.\r\n\r\n#### Tracking a Channel\r\n\r\nTo switch release channels for an extension, install the extension, then\r\nright-click it in the extensions list and select **Switch Release Channels...**.\r\nAlternatively, click the **Channel** button on the extension details page.\r\n\r\nYou can manually select channels with the `privateExtensions.channels` settings\r\nobject. This is a dictionary where each key is an extension identifier\r\n(`\"${publisher}.${name}\"`) and each name is the dist-tag to track, as shown in\r\nthe example below:\r\n\r\n```JSON\r\n\"privateExtensions.channels\": {\r\n    \"garmin.example-1\": \"insiders\", // Tracks the 'insiders' dist-tag\r\n    \"garmin.example-2\": \"beta\",     // Tracks the 'beta' dist-tag\r\n    \"garmin.example-3\": \"1.0.0\"     // Pins the extension to version 1.0.0\r\n}\r\n```\r\n\r\nYou can also pin an extension to a specific version by listing the version\r\ninstead of a dist-tag. Private Extension Manager will not notify you of updates\r\nto a pinned extension, so you can use this to temporarily ignore newer versions\r\nof an extension.\r\n\r\n#### Publishing to a Channel\r\n\r\nTo publish an extension to a channel, simply specify the channel name using\r\n[npm dist-tags](https://docs.npmjs.com/cli/dist-tag) when publishing. By default,\r\nall packages will reference the `latest` tag.\r\n\r\n```\r\nnpm publish . --tag=insiders\r\n```\r\n\r\nWhen publishing pre-release versions, it is reccomended to use pre-release\r\nsematic versioning, such as **1.0.0-beta.0**.\r\n\r\n## Extension Updates\r\n\r\nPrivate Extension Manager will periodically check your installed extensions for\r\nupdates and notify you if any are found. You can adjust the check interval or\r\ndisable it with the `privateExtensions.updateCheckInterval` setting.\r\n\r\nThe Private Extensions sidebar panel will also indicate any extensions with new\r\nversions with a green arrow. Clicking it will update the extension.\r\n\r\nYou will typically need to reload the Visual Studio Code window for an update\r\nto take effect.\r\n\r\n## Remote Development\r\n\r\nWhen using a [remote development](https://code.visualstudio.com/docs/remote/remote-overview)\r\nextension such as [Remote-SSH](https://code.visualstudio.com/docs/remote/ssh),\r\ninstall the [Private Extension Manager: Remote Helper](https://marketplace.visualstudio.com/items?itemName=Garmin.private-extension-manager-remote-helper)\r\nextension to give Private Extension Manager access to the local machine.\r\n\r\nPrivate Extension Manager will attempt to infer where VS Code will install an\r\nextension. If it shows \"Install Locally\" for a workspace extension or vice versa,\r\n[set the `extensionKind` property](https://code.visualstudio.com/api/advanced-topics/remote-extensions#incorrect-execution-location)\r\nin your extension's `package.json` to tell both VS Code and Private Extension\r\nManager where the extension should be installed.\r\n\r\n## Troubleshooting\r\n\r\nIf you are successfully connecting to a private NPM registry and don't see any\r\nerrors, but you don't see any extensions either, first open the Output panel\r\n(Ctrl+Shift+U) and check the dropdown list for \"Private Extension Manager\".\r\nIf it is present, it may contain information as to why extension packages are\r\nbeing discarded.\r\n\r\nIf packages aren't being discarded, they may not be found to begin with. If you\r\ndo not specify a `query` or other options in your registry configuration, the\r\ndefault search query is:\r\n\r\n```\r\n{registry-url}/-/v1/search?text=*&size=20&from=0\r\n```\r\n\r\nCheck how your registry server responds to this. Some servers such as Verdaccio\r\ndo not respond to `text=*` with a list of all packages, so you may need to\r\nchange the `query` option for your registry (see the **Workspace Configuration**)\r\nsection above.\r\n\r\n## Privacy Statement\r\n\r\nWhen communicating with the private extension servers you have configured, the\r\nextension will not transmit any data beyond what is necessary to establish the\r\nconnection. The extension will not transmit any data back to Garmin."
+}

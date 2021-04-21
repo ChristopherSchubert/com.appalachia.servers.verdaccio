@@ -1,0 +1,1620 @@
+{
+	"name": "appa",
+	"versions": {
+		"0.0.2": {
+			"name": "appa",
+			"displayName": "appa",
+			"description": "VSCode extension for Appalachia Interactive development.",
+			"version": "0.0.2",
+			"engines": {
+				"vscode": "^1.55.0"
+			},
+			"categories": [
+				"Other"
+			],
+			"author": {
+				"name": "Appaclachia Interactive"
+			},
+			"activationEvents": [
+				"onCommand:appa.helloWorld"
+			],
+			"main": "./dist/extension.js",
+			"contributes": {
+				"commands": [
+					{
+						"command": "appa.helloWorld",
+						"title": "Hello World"
+					}
+				]
+			},
+			"icon": "media/icon.png",
+			"files": [
+				"appa.vsix",
+				"media/icon.png"
+			],
+			"publisher": "appalachia",
+			"publishConfig": {
+				"registry": "http://localhost:4873/"
+			},
+			"repository": {
+				"url": "git+https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa.git",
+				"type": "git"
+			},
+			"scripts": {
+				"vscode:prepublish": "npm run package",
+				"preversion": "bash ~/com.appalachia/appa/appa package preversion",
+				"version": "bash ~/com.appalachia/appa/appa package version",
+				"postversion": "sh ~/com.appalachia/appa/appa package postversion",
+				"prepublishOnly": "~",
+				"compile": "webpack",
+				"watch": "webpack --watch",
+				"package": "webpack --mode production --devtool hidden-source-map",
+				"test-compile": "tsc -p ./",
+				"test-watch": "tsc -watch -p ./",
+				"pretest": "npm run test-compile && npm run lint",
+				"lint": "eslint src --ext ts",
+				"test": "node ./out/test/runTest.js"
+			},
+			"devDependencies": {
+				"@types/vscode": "^1.55.0",
+				"@types/glob": "^7.1.3",
+				"@types/mocha": "^8.0.4",
+				"@types/node": "^12.11.7",
+				"eslint": "^7.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.14.1",
+				"@typescript-eslint/parser": "^4.14.1",
+				"glob": "^7.1.6",
+				"mocha": "^8.2.1",
+				"typescript": "^4.1.3",
+				"vscode-test": "^1.5.0",
+				"ts-loader": "^8.0.14",
+				"webpack": "^5.19.0",
+				"webpack-cli": "^4.4.0"
+			},
+			"dependencies": {
+				"vsce": "^1.87.1"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"_from": "file:.dist\\appa-0.0.2.tgz",
+			"readmeFilename": "README.md",
+			"bugs": {
+				"url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa/issues"
+			},
+			"homepage": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa#readme",
+			"_id": "appa@0.0.2",
+			"_nodeVersion": "14.16.1",
+			"_npmVersion": "6.14.12",
+			"dist": {
+				"integrity": "sha512-45q/WGUsyxELue+UDDbRiBUJp2KubuAO4y5BFHwFmlzpk8khjQ9MurJ4BnfQ+1F73czGgLnJ8NxqNTSVmVOGyw==",
+				"shasum": "9f6dd11b8a1c03a2da04b37949b9c0cdd72c45d7",
+				"tarball": "http://localhost:4873/appa/-/appa-0.0.2.tgz"
+			},
+			"contributors": []
+		},
+		"0.0.3": {
+			"name": "appa",
+			"displayName": "appa",
+			"description": "VSCode extension for Appalachia Interactive development.",
+			"version": "0.0.3",
+			"engines": {
+				"vscode": "^1.55.0"
+			},
+			"categories": [
+				"Other"
+			],
+			"author": {
+				"name": "Appaclachia Interactive"
+			},
+			"activationEvents": [
+				"onCommand:appa.helloWorld"
+			],
+			"main": "./dist/extension.js",
+			"contributes": {
+				"commands": [
+					{
+						"command": "appa.helloWorld",
+						"title": "Hello World"
+					}
+				]
+			},
+			"icon": "media/icon.png",
+			"files": [
+				"appa.vsix",
+				"media/icon.png"
+			],
+			"publisher": "appalachia",
+			"publishConfig": {
+				"registry": "http://localhost:4873/"
+			},
+			"repository": {
+				"url": "git+https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa.git",
+				"type": "git"
+			},
+			"scripts": {
+				"vscode:prepublish": "npm run package",
+				"preversion": "bash ~/com.appalachia/appa/appa package preversion",
+				"version": "bash ~/com.appalachia/appa/appa package version",
+				"postversion": "sh ~/com.appalachia/appa/appa package postversion",
+				"prepublishOnly": "vsce package -o extension.vsix",
+				"compile": "webpack",
+				"watch": "webpack --watch",
+				"package": "webpack --mode production --devtool hidden-source-map",
+				"test-compile": "tsc -p ./",
+				"test-watch": "tsc -watch -p ./",
+				"pretest": "npm run test-compile && npm run lint",
+				"lint": "eslint src --ext ts",
+				"test": "node ./out/test/runTest.js"
+			},
+			"devDependencies": {
+				"@types/vscode": "^1.55.0",
+				"@types/glob": "^7.1.3",
+				"@types/mocha": "^8.0.4",
+				"@types/node": "^12.11.7",
+				"eslint": "^7.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.14.1",
+				"@typescript-eslint/parser": "^4.14.1",
+				"glob": "^7.1.6",
+				"mocha": "^8.2.1",
+				"typescript": "^4.1.3",
+				"vscode-test": "^1.5.0",
+				"ts-loader": "^8.0.14",
+				"webpack": "^5.19.0",
+				"webpack-cli": "^4.4.0"
+			},
+			"dependencies": {
+				"vsce": "^1.87.1"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"_from": "file:.dist\\appa-0.0.3.tgz",
+			"readmeFilename": "README.md",
+			"bugs": {
+				"url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa/issues"
+			},
+			"homepage": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa#readme",
+			"_id": "appa@0.0.3",
+			"_nodeVersion": "14.16.1",
+			"_npmVersion": "6.14.12",
+			"dist": {
+				"integrity": "sha512-KWsj/GRkZwP7MKBhKDOlcD8rMMtYTIru1Nry77MbHEtKEG7vIUSwWFO465eW0mqsLVFH2++XKRPJ34KN1QzT4g==",
+				"shasum": "287f0250ca6881b3b8bbabd11908e0441661dca3",
+				"tarball": "http://localhost:4873/appa/-/appa-0.0.3.tgz"
+			},
+			"contributors": []
+		},
+		"0.0.4": {
+			"name": "appa",
+			"displayName": "appa",
+			"description": "VSCode extension for Appalachia Interactive development.",
+			"version": "0.0.4",
+			"engines": {
+				"vscode": "^1.55.0"
+			},
+			"categories": [
+				"Other"
+			],
+			"author": {
+				"name": "Appaclachia Interactive"
+			},
+			"activationEvents": [
+				"onCommand:appa.helloWorld"
+			],
+			"main": "./dist/extension.js",
+			"contributes": {
+				"commands": [
+					{
+						"command": "appa.helloWorld",
+						"title": "Hello World"
+					}
+				]
+			},
+			"icon": "media/icon.png",
+			"files": [
+				"appa.vsix",
+				"media/icon.png"
+			],
+			"publisher": "appalachia",
+			"publishConfig": {
+				"registry": "http://localhost:4873/"
+			},
+			"repository": {
+				"url": "git+https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa.git",
+				"type": "git"
+			},
+			"scripts": {
+				"vscode:prepublish": "npm run package",
+				"preversion": "bash ~/com.appalachia/appa/appa package preversion",
+				"version": "bash ~/com.appalachia/appa/appa package version",
+				"postversion": "sh ~/com.appalachia/appa/appa package postversion",
+				"prepublishOnly": "vsce package -o extension.vsix",
+				"compile": "webpack",
+				"watch": "webpack --watch",
+				"package": "webpack --mode production --devtool hidden-source-map",
+				"test-compile": "tsc -p ./",
+				"test-watch": "tsc -watch -p ./",
+				"pretest": "npm run test-compile && npm run lint",
+				"lint": "eslint src --ext ts",
+				"test": "node ./out/test/runTest.js"
+			},
+			"devDependencies": {
+				"@types/vscode": "^1.55.0",
+				"@types/glob": "^7.1.3",
+				"@types/mocha": "^8.0.4",
+				"@types/node": "^12.11.7",
+				"eslint": "^7.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.14.1",
+				"@typescript-eslint/parser": "^4.14.1",
+				"glob": "^7.1.6",
+				"mocha": "^8.2.1",
+				"typescript": "^4.1.3",
+				"vscode-test": "^1.5.0",
+				"ts-loader": "^8.0.14",
+				"webpack": "^5.19.0",
+				"webpack-cli": "^4.4.0"
+			},
+			"dependencies": {
+				"vsce": "^1.87.1"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"_from": "file:.dist\\appa-0.0.4.tgz",
+			"readmeFilename": "README.md",
+			"bugs": {
+				"url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa/issues"
+			},
+			"homepage": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa#readme",
+			"_id": "appa@0.0.4",
+			"_nodeVersion": "14.16.1",
+			"_npmVersion": "6.14.12",
+			"dist": {
+				"integrity": "sha512-1+JR5tklpR0IoGAzHJPokvxgtcuUJacvNzpawLG7KevfHQHEyorHnYtXcDPUkBhP3VeYPOiT+JAE0LxSMHqWzQ==",
+				"shasum": "67577707883227aafbb74d955a0310b9c9f33dfc",
+				"tarball": "http://localhost:4873/appa/-/appa-0.0.4.tgz"
+			},
+			"contributors": []
+		},
+		"0.0.5": {
+			"name": "appa",
+			"displayName": "appa",
+			"description": "VSCode extension for Appalachia Interactive development.",
+			"version": "0.0.5",
+			"engines": {
+				"vscode": "^1.55.0"
+			},
+			"categories": [
+				"Other"
+			],
+			"author": {
+				"name": "Appaclachia Interactive"
+			},
+			"activationEvents": [
+				"onCommand:appa.formatAll"
+			],
+			"main": "./dist/extension.js",
+			"contributes": {
+				"commands": [
+					{
+						"command": "appa.formatAll",
+						"title": "Format All Files In Workspace"
+					}
+				],
+				"configuration": {
+					"type": "object",
+					"title": "Format All Files in Workspace",
+					"properties": {
+						"formatAll.includeFileExtensions": {
+							"type": "array",
+							"default": [
+								".ts",
+								".json"
+							],
+							"description": "List of file extensions to include when formating all files."
+						},
+						"formatAll.excludeFolders": {
+							"type": "array",
+							"default": [
+								"node_modules",
+								"out",
+								".vscode-test",
+								"media"
+							],
+							"description": "List of folder to exclude when formatting all files."
+						}
+					}
+				}
+			},
+			"icon": "media/icon.png",
+			"files": [
+				"appa.vsix",
+				"media/icon.png"
+			],
+			"publisher": "appalachia",
+			"publishConfig": {
+				"registry": "http://localhost:4873/"
+			},
+			"repository": {
+				"url": "git+https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa.git",
+				"type": "git"
+			},
+			"scripts": {
+				"vscode:prepublish": "npm run package",
+				"preversion": "bash ~/com.appalachia/appa/appa package preversion",
+				"version": "bash ~/com.appalachia/appa/appa package version",
+				"postversion": "sh ~/com.appalachia/appa/appa package postversion",
+				"prepublishOnly": "vsce package -o extension.vsix",
+				"compile": "webpack",
+				"watch": "webpack --watch",
+				"package": "webpack --mode production --devtool hidden-source-map",
+				"test-compile": "tsc -p ./",
+				"test-watch": "tsc -watch -p ./",
+				"pretest": "npm run test-compile && npm run lint",
+				"lint": "eslint src --ext ts",
+				"test": "node ./out/test/runTest.js"
+			},
+			"devDependencies": {
+				"@types/vscode": "^1.55.0",
+				"@types/glob": "^7.1.3",
+				"@types/mocha": "^8.0.4",
+				"@types/node": "^12.11.7",
+				"eslint": "^7.19.0",
+				"@typescript-eslint/eslint-plugin": "^4.14.1",
+				"@typescript-eslint/parser": "^4.14.1",
+				"glob": "^7.1.6",
+				"mocha": "^8.2.1",
+				"typescript": "^4.1.3",
+				"vscode-test": "^1.5.0",
+				"ts-loader": "^8.0.14",
+				"webpack": "^5.19.0",
+				"webpack-cli": "^4.4.0"
+			},
+			"dependencies": {
+				"vsce": "^1.87.1"
+			},
+			"_resolved": "",
+			"_integrity": "",
+			"_from": "file:.dist\\appa-0.0.5.tgz",
+			"readmeFilename": "README.md",
+			"bugs": {
+				"url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa/issues"
+			},
+			"homepage": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.appa#readme",
+			"_id": "appa@0.0.5",
+			"_nodeVersion": "14.16.1",
+			"_npmVersion": "6.14.12",
+			"dist": {
+				"integrity": "sha512-Nqb2sD8v9JhZOPHk1g0XpLmoMctK0h3ztBjj1B8oT/FP61cGvTFrWUOWxmriUdA/naB9etXf988iMGMHMeH0Vw==",
+				"shasum": "6e29ea6bbbfe58c9d49e737960e64e5ff6704ebd",
+				"tarball": "http://localhost:4873/appa/-/appa-0.0.5.tgz"
+			},
+			"contributors": []
+		},
+		"1.0.0": {
+			"name": "appa",
+			"version": "1.0.0",
+			"description": "a little friend that helps serve your web API services",
+			"main": "index.js",
+			"scripts": {
+				"test": "tape test.js | tap-spec"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/civicmakerlab/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/civicmakerlab/appa/issues"
+			},
+			"homepage": "https://github.com/civicmakerlab/appa#readme",
+			"dependencies": {},
+			"devDependencies": {
+				"match-routes": "^2.0.0",
+				"request": "^2.60.0",
+				"response": "github:mikeal/response",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.2.0"
+			},
+			"gitHead": "6e9944dc6b1d87568ee72d8995181674a86e198d",
+			"_id": "appa@1.0.0",
+			"_shasum": "54f6db12bb56fce3881b2a436cc4f1db248262ea",
+			"_from": ".",
+			"_npmVersion": "2.13.0",
+			"_nodeVersion": "0.12.6",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "54f6db12bb56fce3881b2a436cc4f1db248262ea",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-1.0.0.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.1": {
+			"name": "appa",
+			"version": "1.0.1",
+			"description": "Build an API service from a collection of modules that each provide a single resource.",
+			"main": "index.js",
+			"scripts": {
+				"test": "tape test.js | tap-spec"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {},
+			"devDependencies": {
+				"match-routes": "^2.0.0",
+				"request": "^2.60.0",
+				"response": "github:mikeal/response",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.2.0"
+			},
+			"gitHead": "6b67e5fa25b89c2580f81f7537d336faea931752",
+			"_id": "appa@1.0.1",
+			"_shasum": "fb0e4e26b37f0fb5ab6f227353e9f760cb27e9a0",
+			"_from": ".",
+			"_npmVersion": "2.13.0",
+			"_nodeVersion": "0.12.6",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "fb0e4e26b37f0fb5ab6f227353e9f760cb27e9a0",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-1.0.1.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"1.0.2": {
+			"name": "appa",
+			"version": "1.0.2",
+			"description": "Build an API service from a collection of modules that each provide a single resource.",
+			"main": "index.js",
+			"scripts": {
+				"test": "tape test.js | tap-spec"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {},
+			"devDependencies": {
+				"match-routes": "^2.0.0",
+				"request": "^2.60.0",
+				"response": "github:mikeal/response",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.2.0"
+			},
+			"gitHead": "af74fbeb47207eba7b922775a496773a6cd7830a",
+			"_id": "appa@1.0.2",
+			"_shasum": "cce6e147682ab0e7f0989447de5a370c566c96b4",
+			"_from": ".",
+			"_npmVersion": "3.3.8",
+			"_nodeVersion": "4.2.1",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"dist": {
+				"shasum": "cce6e147682ab0e7f0989447de5a370c566c96b4",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-1.0.2.tgz"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"2.0.0": {
+			"name": "appa",
+			"version": "2.0.0",
+			"description": "Quickly build micro services.",
+			"main": "index.js",
+			"scripts": {
+				"test": "standard && tape test.js | tap-spec",
+				"build:docs": "documentation-readme -s 'API'"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"body": "^5.1.0",
+				"match-routes": "^2.0.0",
+				"qs": "^6.1.0",
+				"response": "^0.18.0"
+			},
+			"devDependencies": {
+				"documentation-readme": "^2.1.1",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "2b12967fb55ad1e60653c3014b7a880c23c71501",
+			"_id": "appa@2.0.0",
+			"_shasum": "f3602d08aa800193343f0a254cd9fac3c4970585",
+			"_from": ".",
+			"_npmVersion": "3.8.3",
+			"_nodeVersion": "5.7.0",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "f3602d08aa800193343f0a254cd9fac3c4970585",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-2.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/appa-2.0.0.tgz_1460234970865_0.20899932296015322"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"2.1.0": {
+			"name": "appa",
+			"version": "2.1.0",
+			"description": "Quickly build micro services.",
+			"main": "index.js",
+			"scripts": {
+				"test": "standard && tape test.js | tap-spec",
+				"build:docs": "documentation-readme -s 'API'"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"body": "^5.1.0",
+				"bole": "^2.0.0",
+				"match-routes": "^2.0.0",
+				"qs": "^6.1.0",
+				"response": "^0.18.0"
+			},
+			"devDependencies": {
+				"documentation-readme": "^2.1.1",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "c77e67e816eebf360f8f9e3e11ce8f58b1e45cc5",
+			"_id": "appa@2.1.0",
+			"_shasum": "8a0cc0fd717e77240cfc350631bfa9eb1945f55d",
+			"_from": ".",
+			"_npmVersion": "3.8.3",
+			"_nodeVersion": "5.7.0",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "8a0cc0fd717e77240cfc350631bfa9eb1945f55d",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-2.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/appa-2.1.0.tgz_1460760476300_0.46515426132827997"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"3.0.0": {
+			"name": "appa",
+			"version": "3.0.0",
+			"description": "Quickly build micro services.",
+			"main": "index.js",
+			"scripts": {
+				"test": "standard && tape test.js | tap-spec",
+				"build:docs": "documentation-readme -s 'API'"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"accepts": "^1.3.2",
+				"body": "^5.1.0",
+				"bole": "^2.0.0",
+				"match-routes": "^2.0.0",
+				"qs": "^6.1.0",
+				"response": "^0.18.0"
+			},
+			"devDependencies": {
+				"documentation-readme": "^2.1.1",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "a56f5269c0717710f769f016f16af4db69101781",
+			"_id": "appa@3.0.0",
+			"_shasum": "ca417775fc1e8fb5711a0da5d8b06056eefa7d7a",
+			"_from": ".",
+			"_npmVersion": "3.8.3",
+			"_nodeVersion": "5.10.1",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "ca417775fc1e8fb5711a0da5d8b06056eefa7d7a",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-3.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/appa-3.0.0.tgz_1461138621777_0.21836503967642784"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"3.0.1": {
+			"name": "appa",
+			"version": "3.0.1",
+			"description": "Quickly build micro services.",
+			"main": "index.js",
+			"scripts": {
+				"test": "standard && tape test.js | tap-spec",
+				"build:docs": "documentation-readme -s 'API'"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"accepts": "^1.3.2",
+				"body": "^5.1.0",
+				"bole": "^2.0.0",
+				"match-routes": "^2.0.0",
+				"qs": "^6.1.0",
+				"response": "^0.18.0"
+			},
+			"devDependencies": {
+				"documentation-readme": "^2.1.1",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "58fb4527c516c7c058159ab152a8a4c362d308d9",
+			"_id": "appa@3.0.1",
+			"_shasum": "f4f3444b4afc37fe7b6d1de1deedd07810f068e7",
+			"_from": ".",
+			"_npmVersion": "3.8.3",
+			"_nodeVersion": "5.10.1",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "f4f3444b4afc37fe7b6d1de1deedd07810f068e7",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-3.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/appa-3.0.1.tgz_1461139007892_0.676892364397645"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"3.0.2": {
+			"name": "appa",
+			"version": "3.0.2",
+			"description": "Quickly build micro services.",
+			"main": "index.js",
+			"scripts": {
+				"test": "standard && tape test.js | tap-spec",
+				"build:docs": "documentation-readme -s 'API'"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"accepts": "^1.3.2",
+				"body": "^5.1.0",
+				"bole": "^2.0.0",
+				"match-routes": "^2.0.0",
+				"qs": "^6.1.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12"
+			},
+			"devDependencies": {
+				"documentation-readme": "^2.1.1",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "131befac281b2e94474e42f71fa4e1703d9e131e",
+			"_id": "appa@3.0.2",
+			"_shasum": "3e664c91f2a16dd577e9866c73463e59052881d7",
+			"_from": ".",
+			"_npmVersion": "3.8.3",
+			"_nodeVersion": "5.10.1",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "3e664c91f2a16dd577e9866c73463e59052881d7",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-3.0.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/appa-3.0.2.tgz_1461139250018_0.22496972884982824"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"4.0.0": {
+			"name": "appa",
+			"version": "4.0.0",
+			"description": "Quickly build micro services.",
+			"main": "index.js",
+			"scripts": {
+				"test": "standard && tape test.js | tap-spec",
+				"build:docs": "documentation readme -s API"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"accepts": "^1.3.2",
+				"body": "^5.1.0",
+				"bole": "^2.0.0",
+				"documentation": "github:documentationjs/documentation",
+				"match-routes": "^2.0.0",
+				"qs": "^6.1.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12"
+			},
+			"devDependencies": {
+				"documentation": "github:documentationjs/documentation",
+				"documentation-readme": "^2.1.1",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "619f209230d900c08cdb8365689c2cfcd714cd0c",
+			"_id": "appa@4.0.0",
+			"_shasum": "76d24a6ec2cd46cb33f6b4b4388a66dbb75b91fc",
+			"_from": ".",
+			"_npmVersion": "3.8.6",
+			"_nodeVersion": "6.0.0",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "76d24a6ec2cd46cb33f6b4b4388a66dbb75b91fc",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-4.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/appa-4.0.0.tgz_1462073651370_0.9394346384797245"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"4.1.0": {
+			"name": "appa",
+			"version": "4.1.0",
+			"description": "Quickly create simple JSON API services.",
+			"main": "index.js",
+			"scripts": {
+				"test": "standard && tape test.js | tap-spec",
+				"build:docs": "documentation readme -s API"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"JSONStream": "^1.1.2",
+				"accepts": "^1.3.2",
+				"body": "^5.1.0",
+				"match-routes": "^2.0.0",
+				"pump": "^1.0.1",
+				"qs": "^6.1.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12"
+			},
+			"devDependencies": {
+				"documentation": "github:documentationjs/documentation",
+				"from2-string": "^1.1.0",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "dfecb10db23cf68f314e8a4c790f06aa37ed337c",
+			"_id": "appa@4.1.0",
+			"_shasum": "8d357070a175cd8ded7feb0420dd8b899c465f6d",
+			"_from": ".",
+			"_npmVersion": "3.10.2",
+			"_nodeVersion": "6.2.0",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "8d357070a175cd8ded7feb0420dd8b899c465f6d",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-4.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/appa-4.1.0.tgz_1467155724475_0.06391709158197045"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"5.0.0": {
+			"name": "appa",
+			"version": "5.0.0",
+			"description": "Quickly create simple JSON API services.",
+			"main": "index.js",
+			"scripts": {
+				"lint": "standard",
+				"deps": "dependency-check . && dependency-check . --unused --no-dev",
+				"test:node": "tape test.js | tap-spec",
+				"test": "npm run lint && npm run deps && npm run test:node",
+				"build:api": "documentation readme -s API",
+				"build": "npm run build:api"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "MIT",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"JSONStream": "^1.1.2",
+				"body": "^5.1.0",
+				"pino": "^2.7.5",
+				"pino-http": "^1.0.8",
+				"pump": "^1.0.1",
+				"qs": "^6.1.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12",
+				"wayfarer": "^6.1.5",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"documentation": "github:documentationjs/documentation",
+				"from2-string": "^1.1.0",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "611088053edd9f192d0e0dc68dd557ddd88bc8c9",
+			"_id": "appa@5.0.0",
+			"_shasum": "7797d9e750ca9bc18567c52112ae6a655a98e6ab",
+			"_from": ".",
+			"_npmVersion": "3.10.2",
+			"_nodeVersion": "6.2.0",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "7797d9e750ca9bc18567c52112ae6a655a98e6ab",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-5.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-16-east.internal.npmjs.com",
+				"tmp": "tmp/appa-5.0.0.tgz_1469518474265_0.6877955973614007"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"5.0.1": {
+			"name": "appa",
+			"version": "5.0.1",
+			"description": "Quickly create simple JSON API services.",
+			"main": "index.js",
+			"scripts": {
+				"lint": "standard",
+				"deps": "dependency-check . && dependency-check . --unused --no-dev",
+				"test:node": "tape test.js | tap-spec",
+				"test": "npm run lint && npm run deps && npm run test:node",
+				"docs:api": "documentation build index.js -f md -o docs/API.md",
+				"build": "npm run docs:api"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "ISC",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"JSONStream": "^1.1.2",
+				"body": "^5.1.0",
+				"pino": "^2.7.5",
+				"pino-http": "^1.0.8",
+				"pump": "^1.0.1",
+				"qs": "^6.1.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12",
+				"wayfarer": "^6.1.5",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"dependency-check": "^2.5.3",
+				"documentation": "github:documentationjs/documentation",
+				"from2-string": "^1.1.0",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "0d56503ac0d67a0846df9f710b74e419a4f9a4b7",
+			"_id": "appa@5.0.1",
+			"_shasum": "4defbc716ac26cafd228927574c0a55bfd28fdac",
+			"_from": ".",
+			"_npmVersion": "3.10.2",
+			"_nodeVersion": "6.2.0",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "4defbc716ac26cafd228927574c0a55bfd28fdac",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-5.0.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-18-east.internal.npmjs.com",
+				"tmp": "tmp/appa-5.0.1.tgz_1477975507708_0.7560141480062157"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"6.0.0": {
+			"name": "appa",
+			"version": "6.0.0",
+			"description": "Quickly create simple JSON API services.",
+			"main": "index.js",
+			"scripts": {
+				"lint": "standard",
+				"deps": "dependency-check . && dependency-check . --unused --no-dev",
+				"test:node": "tape tests/index.js | tap-spec",
+				"test": "npm run lint && npm run deps && npm run test:node",
+				"docs:api": "documentation build index.js -f md -o docs/API.md",
+				"build": "npm run docs:api"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "ISC",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"JSONStream": "^1.1.2",
+				"body": "^5.1.0",
+				"pino": "^2.7.5",
+				"pino-http": "^1.0.8",
+				"pump": "^1.0.1",
+				"qs": "^6.1.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12",
+				"wayfarer": "^6.1.5",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"dependency-check": "^2.5.3",
+				"documentation": "github:documentationjs/documentation",
+				"from2-string": "^1.1.0",
+				"minidocs": "github:freeman-lab/minidocs",
+				"request": "^2.70.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "ec99078c33c4d6b8208ac635138aa8656889483e",
+			"_id": "appa@6.0.0",
+			"_shasum": "de14889fe60a9455c054038ae398ff1b41ae27ba",
+			"_from": ".",
+			"_npmVersion": "3.10.2",
+			"_nodeVersion": "6.2.0",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "de14889fe60a9455c054038ae398ff1b41ae27ba",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-6.0.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-18-east.internal.npmjs.com",
+				"tmp": "tmp/appa-6.0.0.tgz_1477990556118_0.4757050690241158"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"6.1.0": {
+			"name": "appa",
+			"version": "6.1.0",
+			"description": "Quickly create simple JSON API services.",
+			"main": "index.js",
+			"scripts": {
+				"lint": "standard",
+				"deps": "dependency-check . && dependency-check . --unused --no-dev",
+				"test:node": "tape tests/index.js | tap-spec",
+				"test": "npm run lint && npm run deps && npm run test:node",
+				"docs:api": "documentation build index.js -f md -o docs/API.md",
+				"build": "npm run docs:api"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "ISC",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"JSONStream": "^1.1.2",
+				"pino": "^2.7.5",
+				"pino-http": "^1.0.8",
+				"pump": "^1.0.1",
+				"qs": "^6.1.0",
+				"raw-body": "^2.2.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12",
+				"wayfarer": "^6.1.5",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"dependency-check": "^2.5.3",
+				"documentation": "^4.0.0-beta.18",
+				"from2-string": "^1.1.0",
+				"request": "^2.79.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "b956caa950902ccf452bc582c1653ff8c105899e",
+			"_id": "appa@6.1.0",
+			"_shasum": "24cbf8767194bdb8cb6f82c20729d82f68791809",
+			"_from": ".",
+			"_npmVersion": "4.1.2",
+			"_nodeVersion": "6.9.1",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "24cbf8767194bdb8cb6f82c20729d82f68791809",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-6.1.0.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/appa-6.1.0.tgz_1487544238400_0.23760909237898886"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"6.1.1": {
+			"name": "appa",
+			"version": "6.1.1",
+			"description": "Quickly create simple JSON API services.",
+			"main": "index.js",
+			"scripts": {
+				"lint": "standard",
+				"deps": "dependency-check . && dependency-check . --unused --no-dev",
+				"test:node": "tape tests/index.js | tap-spec",
+				"test": "npm run lint && npm run deps && npm run test:node",
+				"docs:api": "documentation build index.js -f md -o docs/API.md",
+				"build": "npm run docs:api"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "ISC",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"JSONStream": "^1.1.2",
+				"pino": "^2.7.5",
+				"pino-http": "^1.0.8",
+				"pump": "^1.0.1",
+				"qs": "^6.1.0",
+				"raw-body": "^2.2.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12",
+				"wayfarer": "^6.1.5",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"dependency-check": "^2.5.3",
+				"documentation": "^4.0.0-beta.18",
+				"from2-string": "^1.1.0",
+				"request": "^2.79.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "2801060da791662d7b52143a186c1b5eb3c91c42",
+			"_id": "appa@6.1.1",
+			"_shasum": "9976da269e50e0e5f15ee2398b146abd005b374c",
+			"_from": ".",
+			"_npmVersion": "4.1.2",
+			"_nodeVersion": "6.9.1",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "9976da269e50e0e5f15ee2398b146abd005b374c",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-6.1.1.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-12-west.internal.npmjs.com",
+				"tmp": "tmp/appa-6.1.1.tgz_1488051072082_0.1307368588168174"
+			},
+			"deprecated": "use appa@6.1.2",
+			"directories": {},
+			"contributors": []
+		},
+		"6.1.2": {
+			"name": "appa",
+			"version": "6.1.2",
+			"description": "Quickly create simple JSON API services.",
+			"main": "index.js",
+			"scripts": {
+				"lint": "standard",
+				"deps": "dependency-check . && dependency-check . --unused --no-dev",
+				"test:node": "tape tests/index.js | tap-spec",
+				"test": "npm run lint && npm run deps && npm run test:node",
+				"docs:api": "documentation build index.js -f md -o docs/API.md",
+				"build": "npm run docs:api"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "ISC",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"JSONStream": "^1.1.2",
+				"pino": "^2.7.5",
+				"pino-http": "^1.0.8",
+				"pump": "^1.0.1",
+				"qs": "^6.1.0",
+				"raw-body": "^2.2.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12",
+				"wayfarer": "^6.1.5",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"dependency-check": "^2.5.3",
+				"documentation": "^4.0.0-beta.18",
+				"from2-string": "^1.1.0",
+				"request": "^2.79.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "62a50ff1578a9cf22f018c13fb97ff789ad50b21",
+			"_id": "appa@6.1.2",
+			"_shasum": "4f86c81a8fa4a197a9b5de862de790c952770b0c",
+			"_from": ".",
+			"_npmVersion": "4.1.2",
+			"_nodeVersion": "6.9.1",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"shasum": "4f86c81a8fa4a197a9b5de862de790c952770b0c",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-6.1.2.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "packages-18-east.internal.npmjs.com",
+				"tmp": "tmp/appa-6.1.2.tgz_1488092279538_0.9745707274414599"
+			},
+			"directories": {},
+			"contributors": []
+		},
+		"6.1.3": {
+			"name": "appa",
+			"version": "6.1.3",
+			"description": "Quickly create simple JSON API services.",
+			"main": "index.js",
+			"scripts": {
+				"lint": "standard",
+				"deps": "dependency-check . && dependency-check . --unused --no-dev",
+				"test:node": "tape tests/index.js | tap-spec",
+				"test": "npm run lint && npm run deps && npm run test:node",
+				"docs:api": "documentation build index.js -f md -o docs/API.md",
+				"build": "npm run docs:api"
+			},
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/sethvincent/appa.git"
+			},
+			"author": "",
+			"license": "ISC",
+			"bugs": {
+				"url": "https://github.com/sethvincent/appa/issues"
+			},
+			"homepage": "https://github.com/sethvincent/appa#readme",
+			"dependencies": {
+				"JSONStream": "^1.1.2",
+				"pino": "^2.7.5",
+				"pino-http": "^1.0.8",
+				"pump": "^1.0.1",
+				"qs": "^6.1.0",
+				"raw-body": "^2.2.0",
+				"response": "^0.18.0",
+				"type-is": "^1.6.12",
+				"wayfarer": "^6.1.5",
+				"xtend": "^4.0.1"
+			},
+			"devDependencies": {
+				"dependency-check": "^2.5.3",
+				"documentation": "^4.0.0-beta.18",
+				"from2-string": "^1.1.0",
+				"request": "^2.79.0",
+				"standard": "^6.0.8",
+				"tap-spec": "^4.0.2",
+				"tape": "^4.5.1"
+			},
+			"gitHead": "b265c86ca6a0d42fd7efc456cb5e955c404746c9",
+			"_id": "appa@6.1.3",
+			"_npmVersion": "5.0.3",
+			"_nodeVersion": "6.9.1",
+			"_npmUser": {
+				"name": "sethvincent",
+				"email": "sethvincent@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-2248yRsfHUW96F6Y+da0WOfKjz1qdQdNqeR+34ZC9fClb0yPEPsZ4R9swa/nT6bjPsQ8kHMJ++bH4nYbH+WEbg==",
+				"shasum": "9811d7b55dbdc67cbb9bdffae9d15d84c146098b",
+				"tarball": "https://registry.npmjs.org/appa/-/appa-6.1.3.tgz"
+			},
+			"maintainers": [
+				{
+					"name": "sethvincent",
+					"email": "sethvincent@gmail.com"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/appa-6.1.3.tgz_1499019291975_0.8459399186540395"
+			},
+			"directories": {},
+			"contributors": []
+		}
+	},
+	"time": {
+		"modified": "2017-07-02T18:14:52.137Z",
+		"created": "2015-08-18T05:41:00.972Z",
+		"0.0.2": "2021-04-19T22:33:22.643Z",
+		"0.0.3": "2021-04-19T22:35:33.095Z",
+		"0.0.4": "2021-04-19T23:04:39.732Z",
+		"0.0.5": "2021-04-19T23:24:18.332Z",
+		"1.0.0": "2015-08-18T05:41:00.972Z",
+		"1.0.1": "2015-08-18T05:50:08.283Z",
+		"1.0.2": "2015-11-08T06:45:52.048Z",
+		"2.0.0": "2016-04-09T20:49:33.266Z",
+		"2.1.0": "2016-04-15T22:47:58.746Z",
+		"3.0.0": "2016-04-20T07:50:22.199Z",
+		"3.0.1": "2016-04-20T07:56:48.311Z",
+		"3.0.2": "2016-04-20T08:00:50.434Z",
+		"4.0.0": "2016-05-01T03:34:13.735Z",
+		"4.1.0": "2016-06-28T23:15:27.097Z",
+		"5.0.0": "2016-07-26T07:34:37.876Z",
+		"5.0.1": "2016-11-01T04:45:09.598Z",
+		"6.0.0": "2016-11-01T08:55:57.887Z",
+		"6.1.0": "2017-02-19T22:43:58.635Z",
+		"6.1.1": "2017-02-25T19:31:12.337Z",
+		"6.1.2": "2017-02-26T06:58:01.410Z",
+		"6.1.3": "2017-07-02T18:14:52.137Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "6.1.3"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"9a24b777bf83e5792dfe55acba2c4378\"",
+			"fetched": 1618964564300
+		}
+	},
+	"_distfiles": {
+		"appa-1.0.0.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-1.0.0.tgz",
+			"sha": "54f6db12bb56fce3881b2a436cc4f1db248262ea",
+			"registry": "npmjs"
+		},
+		"appa-1.0.1.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-1.0.1.tgz",
+			"sha": "fb0e4e26b37f0fb5ab6f227353e9f760cb27e9a0",
+			"registry": "npmjs"
+		},
+		"appa-1.0.2.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-1.0.2.tgz",
+			"sha": "cce6e147682ab0e7f0989447de5a370c566c96b4",
+			"registry": "npmjs"
+		},
+		"appa-2.0.0.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-2.0.0.tgz",
+			"sha": "f3602d08aa800193343f0a254cd9fac3c4970585",
+			"registry": "npmjs"
+		},
+		"appa-2.1.0.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-2.1.0.tgz",
+			"sha": "8a0cc0fd717e77240cfc350631bfa9eb1945f55d",
+			"registry": "npmjs"
+		},
+		"appa-3.0.0.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-3.0.0.tgz",
+			"sha": "ca417775fc1e8fb5711a0da5d8b06056eefa7d7a",
+			"registry": "npmjs"
+		},
+		"appa-3.0.1.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-3.0.1.tgz",
+			"sha": "f4f3444b4afc37fe7b6d1de1deedd07810f068e7",
+			"registry": "npmjs"
+		},
+		"appa-3.0.2.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-3.0.2.tgz",
+			"sha": "3e664c91f2a16dd577e9866c73463e59052881d7",
+			"registry": "npmjs"
+		},
+		"appa-4.0.0.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-4.0.0.tgz",
+			"sha": "76d24a6ec2cd46cb33f6b4b4388a66dbb75b91fc",
+			"registry": "npmjs"
+		},
+		"appa-4.1.0.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-4.1.0.tgz",
+			"sha": "8d357070a175cd8ded7feb0420dd8b899c465f6d",
+			"registry": "npmjs"
+		},
+		"appa-5.0.0.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-5.0.0.tgz",
+			"sha": "7797d9e750ca9bc18567c52112ae6a655a98e6ab",
+			"registry": "npmjs"
+		},
+		"appa-5.0.1.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-5.0.1.tgz",
+			"sha": "4defbc716ac26cafd228927574c0a55bfd28fdac",
+			"registry": "npmjs"
+		},
+		"appa-6.0.0.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-6.0.0.tgz",
+			"sha": "de14889fe60a9455c054038ae398ff1b41ae27ba",
+			"registry": "npmjs"
+		},
+		"appa-6.1.0.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-6.1.0.tgz",
+			"sha": "24cbf8767194bdb8cb6f82c20729d82f68791809",
+			"registry": "npmjs"
+		},
+		"appa-6.1.1.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-6.1.1.tgz",
+			"sha": "9976da269e50e0e5f15ee2398b146abd005b374c",
+			"registry": "npmjs"
+		},
+		"appa-6.1.2.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-6.1.2.tgz",
+			"sha": "4f86c81a8fa4a197a9b5de862de790c952770b0c",
+			"registry": "npmjs"
+		},
+		"appa-6.1.3.tgz": {
+			"url": "https://registry.npmjs.org/appa/-/appa-6.1.3.tgz",
+			"sha": "9811d7b55dbdc67cbb9bdffae9d15d84c146098b",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {
+		"appa-0.0.2.tgz": {
+			"shasum": "9f6dd11b8a1c03a2da04b37949b9c0cdd72c45d7",
+			"version": "0.0.2"
+		},
+		"appa-0.0.3.tgz": {
+			"shasum": "287f0250ca6881b3b8bbabd11908e0441661dca3",
+			"version": "0.0.3"
+		},
+		"appa-0.0.4.tgz": {
+			"shasum": "67577707883227aafbb74d955a0310b9c9f33dfc",
+			"version": "0.0.4"
+		},
+		"appa-0.0.5.tgz": {
+			"shasum": "6e29ea6bbbfe58c9d49e737960e64e5ff6704ebd",
+			"version": "0.0.5"
+		}
+	},
+	"_rev": "18-dca423634704dd43",
+	"_id": "appa",
+	"readme": "# appa\n\nQuickly create simple JSON API services.\n\n[![npm][npm-image]][npm-url]\n[![travis][travis-image]][travis-url]\n[![standard][standard-image]][standard-url]\n[![conduct][conduct]][conduct-url]\n\n[npm-image]: https://img.shields.io/npm/v/appa.svg?style=flat-square\n[npm-url]: https://www.npmjs.com/package/appa\n[travis-image]: https://img.shields.io/travis/sethvincent/appa.svg?style=flat-square\n[travis-url]: https://travis-ci.org/sethvincent/appa\n[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square\n[standard-url]: http://npm.im/standard\n[conduct]: https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-green.svg?style=flat-square\n[conduct-url]: CONDUCT.md\n\n![appa](https://raw.githubusercontent.com/sethvincent/appa/master/appa.jpg)\n\n## Install\n\nMake sure you've got [node installed](http://nodejs.org), then make `appa` a project dependency:\n\n```sh\nnpm install --save appa\n```\n\n## Usage\n\n```js\nvar http = require('http')\nvar app = require('appa')()\nvar send = require('appa/send')\nvar log = app.log\n\napp.on('/', function (req, res, context) {\n  send({ message: 'oh hey friends' }).pipe(res)\n})\n\nhttp.createServer(app).listen(3000, function () {\n  log.info('server started at http://127.0.0.1:3000')\n})\n```\n\n## Error handling\n\nAny uncaught errors that occur in a request handler will be caught and a `500 Internal server error` response will be sent.\n\nSend error responses using the `appa/error` module:\n\n```js\nvar error = require('appa/error')\n\nmodule.exports = function (req, res, ctx) {\n  return error(404, 'Not found').pipe(res)\n}\n```\n\nSending an error response does not automatically log the error, so to add that you can do something like:\n\n```js\nvar error = require('appa/error')\nvar log = require('appa/log')()\n\nmodule.exports = function (req, res, ctx) {\n  log.error(req.method, '500', errorStack)\n  return error(500, 'Internal server error').pipe(res)\n}\n```\n\n## Logging\n\nappa uses [pino](https://npmjs.com/pino) for logging. Pass options to pino with `options.log`: `appa({ log: pinoOptions })`.\n\nSee [example pino usage](https://github.com/pinojs/pino#usage) and [all pino options](https://github.com/pinojs/pino/blob/master/docs/API.md#pinooptions-stream).\n\nOr disable logging completely by setting `options.log` to `false`: `appa({ log: false })`.\n\n## Documentation\n- [API](docs/api.md)\n- [Tests](tests/)\n\n### Examples\n- [Basic example](examples/basic.js)\n- Example [server](examples/server.js) and [client](examples/client.js)\n\n## Contributing\n\nContributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.\n\n## Conduct\n\nIt is important that this project contributes to a friendly, safe, and welcoming environment for all. Read this project's [code of conduct](CONDUCT.md)\n\n## Changelog\n\nRead about the changes to this project in [CHANGELOG.md](CHANGELOG.md). The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).\n\n## Contact\n\n- **issues** – Please open issues in the [issues queue](https://github.com/sethvincent/appa/issues)\n- **twitter** – Have a question? [@sethdvincent](https://twitter.com/sethdvincent)\n- **email** – Need in-depth support via paid contract? Send an email to sethvincent@gmail.com\n\n## License\n\n[ISC](LICENSE.md)"
+}
